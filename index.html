@@ -21,7 +21,7 @@
 	  <style>
 		body {
 		  font-family: 'Roboto', sans-serif;
-		  font-size: 16px;
+		  font-size: 14px;
 		  font-weight: 400;
 		  color: #525252;
 		  text-align: center;
@@ -64,21 +64,21 @@
     		innerRadius = Math.min(width, height) * .39,
     		outerRadius = innerRadius * 1.1;
 	
-var Names =['Canada', 'United Kingdom', 'United States', 'Italy', 'Japan', 'South Africa', 'Germany', 'Mexico', 'India', 'China'],
+var Names =['United States', 'Hong Kong', 'South Africa', 'United Kingdom', 'Japan', 'Zimbabwe', 'China', 'Germany', 'India', 'Botswana'],
 	colors = ["#468966", "#FFF0A5", "#EAAE3B", "#B64926", "#8E2800", "#FF6138", "#BEEB9F", "#79BD8F", "#FFB05A", "#D93F0B"],
 	opacityDefault = 0.8;
 
 var matrix = [
-			[0, 322, 2202, 123, 264, 32, 334, 30, 0, 178], //CA
-			[286, 80, 2407, 268, 322, 130, 412, 19, 47, 346], //GB
-			[4503, 3679, 297, 1213, 3030, 823, 2829, 551, 71, 1191],//US
-			[518, 806, 3071, 0, 994, 240, 803, 30, 0, 1230], //IT
-			[132, 151, 1588, 71, 0, 21, 215, 9, 4, 121, 5, 222, 84, 461], //JP
-			[208, 826, 2955, 319, 407, 0, 610, 0, 0, 217], //ZA
-			[298, 658, 2087, 439, 625, 225, 0, 24, 0, 2318], //DE
-			[18, 124, 2527, 0, 31, 0, 15, 0, 0, 9], //MX
-			[270, 946, 2351, 144, 329, 0, 610, 4, 0, 478], //IN
-			[227, 398, 928, 393, 253, 48, 1135, 17, 0, 15 ] //CH
+			[36, 53, 14, 119, 91, 3, 61, 48, 0, 5], //US
+			[813, 0, 5, 195, 414, 1, 118, 173, 78, 1], //HK
+			[757, 117, 7, 297, 206, 11, 130, 270, 0, 86],//ZA
+			[462, 63, 24, 0, 83, 6, 63, 84, 39, 4], //GB
+			[241, 288, 3, 60, 0, 0, 25, 46, 1, 1], //JP
+			[355, 10, 267, 236, 73, 14, 67, 234, 27, 84], //ZW
+			[52, 0, 0, 34, 8, 1,1, 61, 0, 0], //CH
+			[279, 59, 32, 61, 128, 2, 329, 0, 22, 7], //DE
+			[271, 42, 1, 143, 42, 0, 66, 114, 0, 0], //IN
+			[209, 7, 156, 99, 29, 37, 13, 34, 0, 1 ] //BW
 		];
 
 ////////////////////////////////////////////////////////////
@@ -90,7 +90,7 @@ var colors = d3.scale.ordinal()
 	.range(colors);
 
 var chord = d3.layout.chord()
-    .padding(.15)
+    .padding(.03)
     .sortChords(d3.descending)
 	.matrix(matrix);
 		
